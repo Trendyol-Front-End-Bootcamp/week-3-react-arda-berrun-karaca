@@ -1,0 +1,23 @@
+.no-result {
+    width: 90%;
+    max-width: 600px;
+    margin: 5rem auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.no-result img{
+    max-width: 400px;
+    height: auto;
+    margin-left: 2rem;
+}
+
+.no-result h1{
+    font-size: 2.6rem;
+    color: var(--light-green); 
+}
+

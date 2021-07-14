@@ -1,0 +1,17 @@
+.character-list {
+  width: 90%;
+  max-width: var(--container);
+  margin: 3rem auto;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .character-list {
+        width: 100%;
+        grid-template-columns: 1fr 1fr
+    }
+}
