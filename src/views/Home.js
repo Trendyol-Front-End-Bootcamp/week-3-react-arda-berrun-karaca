@@ -4,35 +4,51 @@ import Filter from "../components/Filter";
 import CharacterList from "../components/CharacterList";
 import Spinner from "../components/Spinner";
 import NoResult from "../components/NoResult";
+import { getCharacters } from "../services/character-service";
 
-function Home({ baseApiUrl }) {
-  const [api, setApi] = useState(baseApiUrl);
-  const [loading, setLoading] = useState(false);
+
+
+function Home() {
   const [characters, setCharacters] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [searchQueries, setSearchQueries] = useState({
+    name: '',
+    status: '',
+    gender: ''
+  });
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     setLoading(true);
-    fetch(api)
-      .then((res) => res.json())
-      .then((data) => {
-        setCharacters(data);
-        setLoading(false);
-      })
-      .catch((err) => console.log(err));
-  }, [api]);
+
+    (async () => {
+      const characterData = await getCharacters(searchQueries, page);
+
+      setCharacters(characterData);
+      setLoading(false);
+    })();
+  }, [searchQueries, page]);
+
 
   return (
     <div>
-      <Filter baseApiUrl={baseApiUrl} setApiUrl={setApi} />
+      <Filter setPage={setPage} searchQueries={searchQueries} setSearchQueries={setSearchQueries}/>
       {loading ? (
         <Spinner />
       ) : characters.error ? (
-        <NoResult buttonClick={() => setApi(baseApiUrl)} />
+        <NoResult buttonClick={() => {
+          setSearchQueries({
+            name: '',
+            status: '',
+            gender: ''
+          });
+          setPage(1);
+        }} />
       ) : (
         <>
           <CharacterList characters={characters.results} />
           <Pagination
-            setApi={setApi}
+            setPage={setPage}
             next={characters.info?.next}
             prev={characters.info?.prev}
           />

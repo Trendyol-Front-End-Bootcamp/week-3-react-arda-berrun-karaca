@@ -1,10 +1,9 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 
-import "./styles/NoResult.css";
+import './styles/NoResult.css';
 
 function NoResult({ buttonClick }) {
-  
   return (
     <div className="no-result">
       <img src={`${process.env.PUBLIC_URL}/assets/rick.png`} alt="Rick" />

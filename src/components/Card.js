@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import "./styles/Card.css";
+import './styles/Card.css';
 
 function Card({ id, name, status, species, gender, image, location }) {
   return (
@@ -17,11 +17,11 @@ function Card({ id, name, status, species, gender, image, location }) {
           <span className="info">
             <span
               className={`status ${
-                status === "Alive"
-                  ? "status-alive"
-                  : status === "Dead"
-                  ? "status-dead"
-                  : "status-unknown"
+                status === 'Alive'
+                  ? 'status-alive'
+                  : status === 'Dead'
+                  ? 'status-dead'
+                  : 'status-unknown'
               }`}
             ></span>
             {status} - {species} - {gender}

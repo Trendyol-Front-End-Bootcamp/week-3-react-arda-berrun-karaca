@@ -7,7 +7,6 @@
 
 ## Install
 
-> This React app was build with [create-react-app](https://github.com/facebookincubator/create-react-app).
 
 ```shell
 # clone the repo
