@@ -9,7 +9,7 @@ function NoMatch() {
   return (
     <div className="nomatch">
       <div className="nomatch__container">
-        <h3>Oh no! Seems you're in a pickle, Rick !</h3>
+        <h3>Oh no! Seems you're in a pickle, Rick!</h3>
         <h4>Page not found</h4>
         <h1>404</h1>
         <Button onClick={() => history.push('/')}>Go Back</Button>

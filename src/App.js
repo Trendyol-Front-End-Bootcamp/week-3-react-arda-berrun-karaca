@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './views/Home';
@@ -8,19 +8,11 @@ import NoMatch from './views/NoMatch';
 
 function App() {
   return (
-    <Router>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/character/:id">
-          <CharacterDetail />
-        </Route>
-        <Route path="*">
-          <NoMatch />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/character/:id" component={CharacterDetail} />
+        <Route path="*" component={NoMatch} />
       </Switch>
-    </Router>
   );
 }
 

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoResult tests should render correctly 1`] = `
+<div
+  className="no-result"
+>
+  <img
+    alt="Rick"
+    src="/assets/rick.png"
+  />
+  <h1>
+    No Result
+  </h1>
+  <button
+    className="btn"
+    onClick={[Function]}
+  >
+    Go Back
+  </button>
+</div>
+`;

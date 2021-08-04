@@ -5,6 +5,11 @@
 [Inspired UI Design](https://rickandmortyapi.com/)
 
 
+## Preview 
+
+![Preview](./preview/preview.mp4)
+
+
 ## Install
 
 

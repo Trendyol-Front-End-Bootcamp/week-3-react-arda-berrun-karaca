@@ -65,7 +65,7 @@ function CharacterDetail() {
             <p>
               <span>Last episodes: </span>
             </p>
-            {episodes.map((ep) => (
+            {episodes?.map((ep) => (
               <p key={ep.name}>
                 {ep.episode}: {ep.name}
               </p>

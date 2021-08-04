@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 
 import './styles/Card.css';
 
+export const addStatusClass = (status) => {
+  const newStatus = status?.toLowerCase();
+  if (newStatus === 'alive' || newStatus === 'dead') {
+    return `status-${newStatus}`;
+  }
+
+  return 'status-unknown';
+};
+
 function Card({ id, name, status, species, gender, image, location }) {
   return (
     <article className="card">
@@ -16,13 +25,8 @@ function Card({ id, name, status, species, gender, image, location }) {
           </Link>
           <span className="info">
             <span
-              className={`status ${
-                status === 'Alive'
-                  ? 'status-alive'
-                  : status === 'Dead'
-                  ? 'status-dead'
-                  : 'status-unknown'
-              }`}
+              name="status-info"
+              className={`status ${addStatusClass(status)}`}
             ></span>
             {status} - {species} - {gender}
           </span>

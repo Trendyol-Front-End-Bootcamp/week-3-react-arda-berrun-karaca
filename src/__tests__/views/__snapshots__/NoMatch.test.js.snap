@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoMatch tests should render correctly 1`] = `
+<div
+  className="nomatch"
+>
+  <div
+    className="nomatch__container"
+  >
+    <h3>
+      Oh no! Seems you're in a pickle, Rick!
+    </h3>
+    <h4>
+      Page not found
+    </h4>
+    <h1>
+      404
+    </h1>
+    <button
+      className="btn"
+      onClick={[Function]}
+    >
+      Go Back
+    </button>
+  </div>
+</div>
+`;

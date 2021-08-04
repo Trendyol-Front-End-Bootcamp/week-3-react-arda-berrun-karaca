@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card tests should render correctly 1`] = `
+<article
+  className="card"
+>
+  <div
+    className="card-image"
+  >
+    <img
+      alt="Rick Sanchez"
+      src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    />
+  </div>
+  <div
+    className="card-content"
+  >
+    <div
+      className="card-content-section"
+    >
+      <a
+        href="/character/1"
+        onClick={[Function]}
+      >
+        <h3>
+          Rick Sanchez
+        </h3>
+      </a>
+      <span
+        className="info"
+      >
+        <span
+          className="status status-alive"
+          name="status-info"
+        />
+        Alive
+         - 
+        Human
+         - 
+        Male
+      </span>
+    </div>
+    <div
+      className="card-content-section"
+    >
+      <span>
+        Last known location:
+      </span>
+      <p>
+        Earth
+      </p>
+    </div>
+  </div>
+</article>
+`;
